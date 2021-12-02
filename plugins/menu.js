@@ -2,54 +2,52 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'Main',
-  'rpg': 'Epic RPG',
-  'game': 'Game',
-  'xp': 'Exp & Limit',
-  'sticker': 'Sticker',
-  'kerang': 'Kerang Ajaib',
-  'quotes': 'Quotes',
-  'admin': 'Admin',
-  'group': 'Group',
-  'premium': 'Premium',
-  'internet': 'Internet',
-  'anonymous': 'Anonymous Chat',
-  'nulis': 'MagerNulis & Logo',
-  'downloader': 'Downloader',
-  'tools': 'Tools',
-  'fun': 'Fun',
-  'database': 'Database',
-  'vote': 'Voting',
-  'absen': 'Absen',
-  'quran': 'Al Qur\'an',
-  'jadibot': 'Jadi Bot',
-  'owner': 'Owner',
-  'host': 'Host',
-  'advanced': 'Advanced',
-  'info': 'Info',
-  '': 'No Category',
+  'main': 'M A I N',
+  'rpg': 'G A M E - 1',
+  'game': 'G A M E - 2',
+  'xp': 'E X P - L I M I T',
+  'sticker': 'S T I C K E R',
+  'kerang': 'K E R A N G - A J A I B',
+  'quotes': 'Q U O T E S',
+  'admin': 'A D M I N',
+  'group': 'G R O U P',
+  'premium': 'P R E M I U M',
+  'internet': 'I N T E R N E T',
+  'anonymous': 'A N O N C H A T',
+  'nulis': 'L O G O - N U L I S',
+  'downloader': 'D O W N L O A D',
+  'tools': 'T O O L S',
+  'fun': 'F U N N Y',
+  'database': 'D A T A B A S E',
+  'vote': 'V O T I N G',
+  'absen': 'A B S E N',
+  'quran': 'A L Q U R-A N',
+  'jadibot': 'J A D I B O T',
+  'owner': 'O W N E R',
+  'host': 'H O S T',
+  'advanced': 'A D V A N C E D',
+  'info': 'I N F O R M A S I',
+  '': 'N U - E W E H',
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ %ucapan, %name!
-│
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+*MY USER BOT*
+
+Server: *herokuapp.com*
+Language: *Nodejs*
+Database: *Github.com*
+Library: *Baileys*
+Tanggal: %week %date 2021
+Waktu: %time
+
+Hallo %name 
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '* %category *',
+  body: '```• %cmd %islimit %isPremium```',
+  footer: ' ',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*❤️ Ismail Kurama*
+${'```2021 © herokuapp.com```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
