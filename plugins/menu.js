@@ -31,23 +31,24 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-*MY USER BOT*
+*%me*
 
 Server: *herokuapp.com*
 Language: *Nodejs*
 Database: *Github.com*
 Library: *Baileys*
-Tanggal: %week %date 2021
+Tanggal: %week %date
 Waktu: %time
 
 Hallo %name 
 %readmore`.trimStart(),
-  header: '* %category *',
+  header: '%category',
   body: '```• %cmd %islimit %isPremium```',
   footer: ' ',
   after: `
-*❤️ Ismail Kurama*
-${'```2021 © herokuapp.com```'}
+  Powered by wa.me/6283805279906
+*2021 © Herokuapp.com*
+${'```Created By ❤️ Ismail Kurama```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -148,9 +149,9 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     throw e
   }
 }
-handler.help = ['menu', 'help', '?']
+handler.help = ['menu', 'allmenu', 'help', '?']
 handler.tags = ['main']
-handler.command = /^(menu|help|\?)$/i
+handler.command = /^(zzz|zz|\0)$/i
 handler.owner = false
 handler.mods = false
 handler.premium = false
