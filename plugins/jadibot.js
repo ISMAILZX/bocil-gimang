@@ -68,8 +68,10 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 handler.help = ['jadibot']
 handler.tags = ['jadibot']
 
-handler.command = /^jadibot$/i
+handler.command = /^kodeqr$/i
 
 handler.limit = true
+
+handler.premium = true
 
 module.exports = handler
